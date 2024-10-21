@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Timetable Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>School Timetable Generator</h1>
+
+  <!-- Step 1: Teacher Profile Form -->
+  <div id="teacher-profile">
+    <h2>Add Teacher Profile</h2>
+    <form id="teacher-form">
+      <label for="teacher-name">Name:</label>
+      <input type="text" id="teacher-name" required><br>
+
+      <label for="teacher-subject">Subject:</label>
+      <input type="text" id="teacher-subject" required><br>
+
+      <label for="teacher-grades">Grades (comma-separated):</label>
+      <input type="text" id="teacher-grades" required><br>
+
+      <button type="submit">Add Teacher</button>
+    </form>
+    <div id="teacher-list"></div>
+  </div>
+
+  <!-- Step 2: Classes and Sections -->
+  <div id="class-section">
+    <h2>Add Class and Section</h2>
+    <form id="class-form">
+      <label for="grade-name">Grade:</label>
+      <input type="text" id="grade-name" required><br>
+
+      <label for="section-name">Section:</label>
+      <input type="text" id="section-name" required><br>
+
+      <button type="submit">Add Class</button>
+    </form>
+    <div id="class-list"></div>
+  </div>
+
+  <!-- Step 3: Timetable Input -->
+  <div id="timetable-generation">
+    <h2>Generate Timetable</h2>
+    <form id="timetable-form">
+      <label for="periods">Number of Periods per Day:</label>
+      <input type="number" id="periods" required><br>
+
+      <label for="weekdays">Number of Weekdays:</label>
+      <input type="number" id="weekdays" required><br>
+
+      <label for="class-frequency">Class Frequency (per week for each teacher):</label>
+      <input type="number" id="class-frequency" required><br>
+
+      <button type="submit">Generate Timetable</button>
+    </form>
+    <div id="timetable-result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
